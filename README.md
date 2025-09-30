@@ -2,6 +2,8 @@
 
 A serverless API proxy for querying ArXiv papers with structured JSON responses. Built with TypeScript and Vercel Functions.
 
+🌐 **Live Demo**: [https://alen-hh.github.io/arxiv-query-proxy](https://alen-hh.github.io/arxiv-query-proxy)
+
 ## Features
 
 - 🔍 **Search ArXiv papers** with flexible query parameters
@@ -9,6 +11,8 @@ A serverless API proxy for querying ArXiv papers with structured JSON responses.
 - 🚀 **Serverless deployment** ready for Vercel
 - 📝 **TypeScript support** with full type safety
 - 🎯 **Filtered data** - extracts only essential paper information
+- 🏠 **User-friendly home page** with API guide and examples
+- 🌐 **GitHub Pages deployment** for easy access
 
 ## API Endpoints
 
@@ -46,19 +50,22 @@ Query ArXiv papers and get structured JSON responses.
 
 ## Usage Examples
 
+### Quick Start
+Visit the [live demo page](https://alen-hh.github.io/arxiv-query-proxy) and click the example link to try searching for LLM papers!
+
 ### Basic Search
 ```bash
-curl "https://your-domain.vercel.app/api/arxiv-query?search_query=machine+learning"
+curl "https://alen-hh.github.io/arxiv-query-proxy/api/arxiv-query?search_query=machine+learning"
 ```
 
 ### Advanced Search with Date Range
 ```bash
-curl "https://your-domain.vercel.app/api/arxiv-query?search_query=AI+AND+submittedDate:[202509290000+TO+202509300000]&sortBy=submittedDate&sortOrder=descending&max_results=5"
+curl "https://alen-hh.github.io/arxiv-query-proxy/api/arxiv-query?search_query=AI+AND+submittedDate:[202509290000+TO+202509300000]&sortBy=submittedDate&sortOrder=descending&max_results=5"
 ```
 
 ### Search by Category
 ```bash
-curl "https://your-domain.vercel.app/api/arxiv-query?search_query=cat:cs.AI&max_results=3"
+curl "https://alen-hh.github.io/arxiv-query-proxy/api/arxiv-query?search_query=cat:cs.AI&max_results=3"
 ```
 
 ## Local Development
@@ -72,7 +79,7 @@ curl "https://your-domain.vercel.app/api/arxiv-query?search_query=cat:cs.AI&max_
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/alen-hh/arxiv-query-proxy.git
    cd arxiv-query-proxy
    ```
 
@@ -100,16 +107,28 @@ curl "http://localhost:3000/api/arxiv-query?search_query=neural+networks&max_res
 
 ## Deployment
 
+This project is deployed on GitHub Pages at: [https://alen-hh.github.io/arxiv-query-proxy](https://alen-hh.github.io/arxiv-query-proxy)
+
 ### Deploy to Vercel
 
 1. **One-Click Deploy**
    
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/arxiv-query-proxy)
+   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/alen-hh/arxiv-query-proxy)
 
 2. **Manual Deploy**
    ```bash
    vercel --prod
    ```
+
+### Deploy to GitHub Pages
+
+The project includes an `index.html` file that serves as a user-friendly guide page. To deploy to GitHub Pages:
+
+1. Push your changes to the `main` branch
+2. Go to your repository settings on GitHub
+3. Navigate to "Pages" section
+4. Select "Deploy from a branch" and choose `main` branch
+5. Your site will be available at `https://your-username.github.io/arxiv-query-proxy`
 
 ## Project Structure
 
@@ -117,9 +136,10 @@ curl "http://localhost:3000/api/arxiv-query?search_query=neural+networks&max_res
 arxiv-query-proxy/
 ├── api/
 │   └── arxiv-query.ts    # Main ArXiv proxy API
-├── package.json          # Dependencies and scripts
-├── README.md            # This file
-└── .gitignore           # Git ignore rules
+├── index.html           # Home page with API guide
+├── package.json         # Dependencies and scripts
+├── README.md           # This file
+└── .gitignore          # Git ignore rules
 ```
 
 ## ArXiv Query Syntax

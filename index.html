@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArXiv Query API Guide</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        
+        .description {
+            background: #e8f4fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .example-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .example-link {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+            margin: 10px 0;
+        }
+        
+        .example-link:hover {
+            background: #2980b9;
+        }
+        
+        .api-info {
+            margin-top: 30px;
+        }
+        
+        .parameter {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 6px;
+        }
+        
+        .parameter-name {
+            font-weight: bold;
+            color: #e74c3c;
+            font-family: 'Monaco', 'Menlo', monospace;
+        }
+        
+        code {
+            background: #f1f2f6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9em;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 ArXiv Query API Guide</h1>
+        
+        <div class="description">
+            <p><strong>Welcome!</strong> This is a simple proxy API for querying ArXiv research papers. Use the API endpoint below to search for academic papers by keywords, topics, or authors.</p>
+        </div>
+        
+        <div class="example-section">
+            <h2>🚀 Try it now!</h2>
+            <p>Click the link below to see an example search for "LLM" (Large Language Models):</p>
+            <a href="/api/arxiv-query?search_query=LLM" class="example-link" target="_blank">
+                Search for LLM papers →
+            </a>
+            <p><small>This will open the API response in a new tab showing recent papers about Large Language Models.</small></p>
+        </div>
+        
+        <div class="api-info">
+            <h2>📖 API Usage</h2>
+            <p><strong>Endpoint:</strong> <code>/api/arxiv-query</code></p>
+            <p><strong>Method:</strong> GET</p>
+            
+            <h3>Parameters:</h3>
+            
+            <div class="parameter">
+                <div class="parameter-name">search_query</div>
+                <div><strong>Required.</strong> Your search terms (e.g., "machine learning", "quantum computing", "neural networks")</div>
+            </div>
+            
+            <div class="parameter">
+                <div class="parameter-name">max_results</div>
+                <div><strong>Optional.</strong> Number of results to return (default: 10, max: 100)</div>
+            </div>
+            
+            <div class="parameter">
+                <div class="parameter-name">start</div>
+                <div><strong>Optional.</strong> Starting index for pagination (default: 0)</div>
+            </div>
+            
+            <div class="parameter">
+                <div class="parameter-name">sortBy</div>
+                <div><strong>Optional.</strong> Sort by "submittedDate" or "relevance" (default: "submittedDate")</div>
+            </div>
+            
+            <div class="parameter">
+                <div class="parameter-name">sortOrder</div>
+                <div><strong>Optional.</strong> "ascending" or "descending" (default: "descending")</div>
+            </div>
+            
+            <h3>Example URLs:</h3>
+            <ul>
+                <li><code>/api/arxiv-query?search_query=machine learning</code></li>
+                <li><code>/api/arxiv-query?search_query=quantum computing&max_results=20</code></li>
+                <li><code>/api/arxiv-query?search_query=neural networks&sortBy=relevance</code></li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>Built with ❤️ for researchers and developers</p>
+        </div>
+    </div>
+</body>
+</html>

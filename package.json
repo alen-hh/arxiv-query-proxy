@@ -1,7 +1,16 @@
 {
-  "repository": "https://github.com/vercel/examples.git",
+  "name": "arxiv-query-proxy",
+  "version": "1.0.0",
+  "description": "A simple proxy API for querying ArXiv research papers",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alen-hh/arxiv-query-proxy.git"
+  },
+  "homepage": "https://alen-hh.github.io/arxiv-query-proxy",
   "license": "MIT",
-  "private": true,
+  "private": false,
+  "keywords": ["arxiv", "api", "research", "papers", "proxy"],
+  "author": "alen-hh",
   "devDependencies": {
     "@types/node": "^17.0.42",
     "@vercel/node": "^2.9.6",
