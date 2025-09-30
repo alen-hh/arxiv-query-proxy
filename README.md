@@ -94,9 +94,6 @@ curl "https://your-domain.vercel.app/api/arxiv-query?search_query=cat:cs.AI&max_
 Test the API endpoints:
 
 ```bash
-# Test hello endpoint
-curl "http://localhost:3000/api/hello?name=Test"
-
 # Test ArXiv query
 curl "http://localhost:3000/api/arxiv-query?search_query=neural+networks&max_results=2"
 ```
@@ -119,8 +116,7 @@ curl "http://localhost:3000/api/arxiv-query?search_query=neural+networks&max_res
 ```
 arxiv-query-proxy/
 ├── api/
-│   ├── arxiv-query.ts    # Main ArXiv proxy API
-│   └── hello.ts          # Simple hello world endpoint
+│   └── arxiv-query.ts    # Main ArXiv proxy API
 ├── package.json          # Dependencies and scripts
 ├── README.md            # This file
 └── .gitignore           # Git ignore rules
