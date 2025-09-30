@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/alen-hh/arxiv-query-proxy.git"
   },
-  "homepage": "https://alen-hh.github.io/arxiv-query-proxy",
+  "homepage": "https://arxiv-query-proxy.vercel.app",
   "license": "MIT",
   "private": false,
   "keywords": ["arxiv", "api", "research", "papers", "proxy"],
